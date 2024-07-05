@@ -39,19 +39,20 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 logging.basicConfig(format=log_format, stream=sys.stdout, level=logging.INFO)
 
-BASE_API_URL = "http://127.0.0.1:7860/api/v1/process"
-FLOW_ID = "7f87efdd-305a-4104-b920-53157442b567"
+BASE_API_URL = "https://langflow-langflow.hf.space/api/v1/run"
+FLOW_ID = "a2ac7c3e-a0d1-4056-b9e6-79a53db4ee5e"
 
 
 TWEAKS = {
-  "CombineDocsChain-TGYSd": {},
-  "RetrievalQA-OpjpJ": {},
-  "Chroma-7rDAC": {},
-  "Document-Vi22X": {},
-  "OpenAIEmbeddings-Q9FBK": {},
-  "ChatOpenAI-gVK9z": {},
-  "PyPDFLoader-tuFsy": {}
+  "CombineDocsChain-3uX36": {},
+  "RetrievalQA-mXCDW": {},
+  "Chroma-zgj8K": {},
+  "Document-P4hAU": {},
+  "OpenAIEmbeddings-Y4lG5": {},
+  "ChatOpenAI-QPSRk": {},
+  "PyPDFLoader-IS3Et": {}
 }
+
 
 
 load_dotenv()
@@ -111,7 +112,7 @@ with st.sidebar:
             filepaths.append(file.name)
 
         st.info("Files uploaded successfully!")
-        TWEAKS["PyPDFLoader-tuFsy"]["file_path"] = [os.path.abspath(filepath) for filepath in filepaths]
+        TWEAKS["PyPDFLoader-IS3Et"]["file_path"] = [os.path.abspath(filepath) for filepath in filepaths]
     else:
         st.warning("Please upload valid files.")
 
