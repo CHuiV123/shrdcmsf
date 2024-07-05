@@ -40,17 +40,17 @@ log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 logging.basicConfig(format=log_format, stream=sys.stdout, level=logging.INFO)
 
 BASE_API_URL = "http://127.0.0.1:7860/api/v1/process"
-FLOW_ID = "4087790a-77d8-440e-b5d1-15e6632ba664"
+FLOW_ID = "7f87efdd-305a-4104-b920-53157442b567"
 
 
 TWEAKS = {
-  "Data-hSdBW": {},
-  "OpenAIEmbeddings-1URfp": {},
-  "ChatOpenAI-6K4YY": {},
-  "CombineDocsChain-uiaIC": {},
-  "RetrievalQA-zwK4k": {},
-  "Chroma-lZLUr": {},
-  "Data-wpM9G": {}
+  "CombineDocsChain-TGYSd": {},
+  "RetrievalQA-OpjpJ": {},
+  "Chroma-7rDAC": {},
+  "Document-Vi22X": {},
+  "OpenAIEmbeddings-Q9FBK": {},
+  "ChatOpenAI-gVK9z": {},
+  "PyPDFLoader-tuFsy": {}
 }
 
 
@@ -111,7 +111,7 @@ with st.sidebar:
             filepaths.append(file.name)
 
         st.info("Files uploaded successfully!")
-        TWEAKS["Data-wpM9G"]["file_path"] = [os.path.abspath(filepath) for filepath in filepaths]
+        TWEAKS["PyPDFLoader-tuFsy"]["file_path"] = [os.path.abspath(filepath) for filepath in filepaths]
     else:
         st.warning("Please upload valid files.")
 
