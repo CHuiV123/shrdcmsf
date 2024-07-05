@@ -1,2 +1,3 @@
 htbuilder
 python-dotenv
+streamlit_extras
